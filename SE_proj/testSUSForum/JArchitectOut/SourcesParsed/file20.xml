@@ -1,0 +1,5 @@
+<root><type name="com.sustech.main_service.mapper.CommentMapper" s="10"  vis="public"  kind="interface"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.mapper.Mapper"/>
+</annotations><method name="addComment(com.sustech.main_service.entity.Comment)" name2="addComment(Comment)" s="13" e="14" n ="false" sta ="false" sync ="false" vis="package" return="int"  signature="(com.sustech.main_service.entity.Comment)"><annotations><annotation name="com.sustech.main_service.mapper.Insert"/></annotations><params><param type="com.sustech.main_service.entity.Comment"/></params><metrics cc="1" cm="0" n1="3" n2="0" N1="2" N2="0" vars="0" loc="0"/></method><method name="getUserComments(java.lang.String)" name2="getUserComments(String)" s="16" e="17" n ="false" sta ="false" sync ="false" vis="package" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.mapper.Select"/></annotations><params><param type="java.lang.String"/></params><metrics cc="1" cm="0" n1="3" n2="0" N1="2" N2="0" vars="0" loc="0"/></method>
+</type></root>

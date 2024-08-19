@@ -1,0 +1,3 @@
+<root><type name="com.sustech.main_service.service.CommentService" s="7"  vis="public"  kind="interface"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<method name="getUserComments(java.lang.String)" name2="getUserComments(String)" s="8" e="8" n ="false" sta ="false" sync ="false" vis="package" return="java.util.List"  signature="(java.lang.String)"><params><param type="java.lang.String"/></params><metrics cc="1" cm="0" n1="2" n2="0" N1="2" N2="0" vars="0" loc="0"/></method>
+</type></root>

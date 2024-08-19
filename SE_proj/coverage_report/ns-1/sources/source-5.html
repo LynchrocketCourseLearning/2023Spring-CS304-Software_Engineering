@@ -1,0 +1,245 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > UserCenterController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.sustech.main_service.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: UserCenterController (com.sustech.main_service.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserCenterController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (44/66)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.sustech.main_service.controller;
+&nbsp;
+&nbsp;import com.sustech.global.entity.Result;
+&nbsp;import com.sustech.main_service.entity.*;
+&nbsp;import com.sustech.main_service.entity.VO.UserCollectionVO;
+&nbsp;import com.sustech.main_service.service.*;
+&nbsp;import io.swagger.annotations.Api;
+&nbsp;import io.swagger.annotations.ApiOperation;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.HashMap;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Map;
+&nbsp;
+&nbsp;@Api(tags = &quot;用户个人中心模块&quot;)
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/userCenter&quot;)
+&nbsp;@CrossOrigin
+<b class="fc">&nbsp;public class UserCenterController {</b>
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    private UserService userService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    private ArticleService articleService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    private TopicService topicService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    private CommentService commentService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    private UserCollectionService userCollectionService;
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;获取用户所有数据&quot;)
+&nbsp;    @GetMapping(&quot;getUserData&quot;)
+&nbsp;    public Result getUserData(String userId) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(userId);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;user&quot;,user);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;修改用户数据&quot;)
+&nbsp;    @PostMapping(&quot;editUserData&quot;)
+&nbsp;    public Result editUserData(User user) {
+<b class="fc">&nbsp;        User dbUser = userService.getByUserId(user.getId());</b>
+<b class="fc">&nbsp;        if (dbUser == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        userService.reviseInfo(user);</b>
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;user&quot;,user);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;返回用户文章&quot;)
+&nbsp;    @GetMapping(&quot;getUserArticles&quot;)
+&nbsp;    public Result getUserArticles(String userId) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(userId);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        List&lt;Article&gt; articleList = articleService.getUserArticles(userId);</b>
+<b class="fc">&nbsp;        if (articleList == null || articleList.size() == 0) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user articles&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;articles&quot;,articleList);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;返回用户话题&quot;)
+&nbsp;    @GetMapping(&quot;getUserTopics&quot;)
+&nbsp;    public Result getUserTopics(String userId) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(userId);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        List&lt;Topic&gt; topicList = topicService.getUserTopics(userId);</b>
+<b class="fc">&nbsp;        if (topicList == null || topicList.size() == 0) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user topics&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;topics&quot;,topicList);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;返回用户评论&quot;)
+&nbsp;    @GetMapping(&quot;getUserComments&quot;)
+&nbsp;    public Result getUserComments(String userId) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(userId);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        List&lt;Comment&gt; commentList = commentService.getUserComments(userId);</b>
+<b class="fc">&nbsp;        if (commentList == null || commentList.size() == 0) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user comments&quot;);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="nc">&nbsp;        map.put(&quot;comments&quot;, commentList);</b>
+<b class="nc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;返回用户收藏&quot;)
+&nbsp;    @GetMapping(&quot;getUserCollections&quot;)
+&nbsp;    public Result getUserCollections(String userId) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(userId);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        List&lt;UserCollection&gt; userCollectionList = userCollectionService.getUserCollections(userId);</b>
+<b class="fc">&nbsp;        if (userCollectionList == null || userCollectionList.size() == 0) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;No such user collections&quot;);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        List&lt;UserCollectionVO&gt; userCollectionVOList = new ArrayList&lt;&gt;();</b>
+<b class="nc">&nbsp;        for (UserCollection x : userCollectionList) {</b>
+<b class="nc">&nbsp;            if (x.getValid() == 0) continue;</b>
+<b class="nc">&nbsp;            Topic topic = (Topic) topicService.getById(x.getTopic_id()).getData().get(&quot;topic&quot;);</b>
+<b class="nc">&nbsp;            String topicTitle = (topic == null) ? &quot;&quot; : topic.getTitle();</b>
+<b class="nc">&nbsp;            Article article = articleService.getByArticleId(x.getArticle_id());</b>
+<b class="nc">&nbsp;            String articleTitle = (article == null) ? &quot;&quot; : article.getTitle();</b>
+<b class="nc">&nbsp;            UserCollectionVO u = new UserCollectionVO();</b>
+<b class="nc">&nbsp;            u.setId(x.getId());</b>
+<b class="nc">&nbsp;            u.setUserId(x.getUser_id());</b>
+<b class="nc">&nbsp;            u.setTopicId(x.getTopic_id());</b>
+<b class="nc">&nbsp;            u.setTopicTitle(topicTitle);</b>
+<b class="nc">&nbsp;            u.setArticleId(x.getArticle_id());</b>
+<b class="nc">&nbsp;            u.setArticleTitle(articleTitle);</b>
+<b class="nc">&nbsp;            userCollectionVOList.add(u);</b>
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="nc">&nbsp;        map.put(&quot;collections&quot;, userCollectionVOList);</b>
+<b class="nc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-01 01:59</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<root><type name="com.sustech.cloud_storage.controller.FileUploadingController" s="17"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.cloud_storage.controller.RestController"/>
+<annotation name="com.sustech.cloud_storage.controller.CrossOrigin"/>
+<annotation name="com.sustech.cloud_storage.controller.RequestMapping"/>
+<annotation name="com.sustech.cloud_storage.controller.Api"/>
+</annotations><field name="fileUploadingService" s="22" type="com.sustech.cloud_storage.service.FileUploadingService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.cloud_storage.controller.Autowired"/></annotations></field>
+<method name="upload(com.sustech.cloud_storage.controller.MultipartFile)" name2="upload(MultipartFile)" s="24" e="31" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(com.sustech.cloud_storage.controller.MultipartFile)"><annotations><annotation name="com.sustech.cloud_storage.controller.ApiOperation"/><annotation name="com.sustech.cloud_storage.controller.PostMapping"/></annotations><params><param type="com.sustech.cloud_storage.controller.MultipartFile"/></params><dm p="com.sustech.cloud_storage.service.FileUploadingService" s="upload(com.sustech.cloud_storage.service.MultipartFile)" s2="upload(MultipartFile)"/>
+<f p="com.sustech.cloud_storage.controller.FileUploadingController" s="fileUploadingService"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="11" n2="1" N1="13" N2="4" vars="2" loc="4"/></method>
+</type></root>

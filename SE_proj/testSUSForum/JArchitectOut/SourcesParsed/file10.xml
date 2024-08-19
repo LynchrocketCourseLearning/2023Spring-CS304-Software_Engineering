@@ -1,0 +1,50 @@
+<root><type name="com.sustech.main_service.controller.AccountController" s="14"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.controller.Api"/>
+<annotation name="com.sustech.main_service.controller.RestController"/>
+<annotation name="com.sustech.main_service.controller.RequestMapping"/>
+<annotation name="com.sustech.main_service.controller.CrossOrigin"/>
+</annotations><field name="userService" s="19" type="com.sustech.main_service.service.UserService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<method name="login(java.lang.String,java.lang.String)" name2="login(String,String)" s="22" e="30" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUsername(java.lang.String)" s2="getByUsername(String)"/>
+<f p="com.sustech.main_service.controller.AccountController" s="userService"/>
+<dm p="java.lang.String" s="equals(java.lang.Object)" s2="equals(Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="3" cm="0" n1="11" n2="5" N1="13" N2="13" vars="1" loc="4"/></method><method name="register(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" name2="register(String,String,String,String)" s="32" e="53" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.entity.User" s="User()"/>
+<dm p="java.lang.String" s="valueOf(int)" s2="valueOf(int)"/>
+<dm p="java.util.Random" s="nextInt(int)" s2="nextInt(int)"/>
+<dm p="java.util.Random" s="Random()"/>
+<dm p="com.sustech.main_service.service.UserService" s="getByUsername(java.lang.String)" s2="getByUsername(String)"/>
+<f p="com.sustech.main_service.controller.AccountController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.UserService" s="addUser(com.sustech.main_service.entity.User)" s2="addUser(User)"/>
+<f p="com.sustech.main_service.controller.AccountController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="4" cm="0" n1="16" n2="4" N1="25" N2="28" vars="2" loc="15"/></method><method name="reviseInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" name2="reviseInfo(String,String,String,String,String,String,String)" s="55" e="75" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.PostMapping"/><annotation name="com.sustech.main_service.controller.ApiOperation"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.AccountController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.UserService" s="reviseInfo(com.sustech.main_service.entity.User)" s2="reviseInfo(User)"/>
+<f p="com.sustech.main_service.controller.AccountController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="9" cm="0" n1="18" n2="6" N1="40" N2="29" vars="1" loc="14"/></method>
+</type></root>

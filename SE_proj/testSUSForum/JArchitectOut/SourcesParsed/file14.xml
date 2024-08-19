@@ -1,0 +1,25 @@
+<root><type name="com.sustech.main_service.entity.Topic" s="9"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="4" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.Data"/>
+</annotations><field name="id" s="16" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="title" s="20" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="user_id" s="21" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="is_anonymous" s="22" type="java.lang.Boolean" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="views" s="23" type="java.lang.Integer" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="answers" s="24" type="java.lang.Integer" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="likes" s="25" type="java.lang.Integer" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="valid" s="26" type="boolean" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_create" s="27" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_modified" s="28" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

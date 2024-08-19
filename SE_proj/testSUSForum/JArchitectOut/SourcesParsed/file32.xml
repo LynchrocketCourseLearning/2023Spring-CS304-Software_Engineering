@@ -1,0 +1,40 @@
+<root><type name="com.sustech.main_service.service.impl.OrderServiceImpl" s="16"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.main_service.service.OrderService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="mapper" s="19" type="com.sustech.main_service.mapper.OrderMapper" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="getOrderById(int)" name2="getOrderById(int)" s="23" e="26" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/></params><dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="3" N2="1" vars="0" loc="1"/></method><method name="getAllOrder()" name2="getAllOrder()" s="28" e="34" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><annotations><annotation name="java.lang.Override"/></annotations><dm p="com.sustech.main_service.mapper.OrderMapper" s="getAllOrder()" s2="getAllOrder()"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="7" N2="5" vars="2" loc="4"/></method><method name="buyOrder(int,java.lang.String,java.lang.String)" name2="buyOrder(int,String,String)" s="36" e="41" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(int,java.lang.String,java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.OrderMapper" s="invalidOrder(int)" s2="invalidOrder(int)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.main_service.mapper.OrderMapper" s="setBuyer(int,java.lang.String,java.lang.String)" s2="setBuyer(int,String,String)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="8" N2="4" vars="0" loc="3"/></method><method name="sellOrder(int,java.lang.String,java.lang.String)" name2="sellOrder(int,String,String)" s="43" e="48" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(int,java.lang.String,java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.OrderMapper" s="setSeller(int,java.lang.String,java.lang.String)" s2="setSeller(int,String,String)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.main_service.mapper.OrderMapper" s="invalidOrder(int)" s2="invalidOrder(int)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="8" N2="4" vars="0" loc="3"/></method><method name="deleteOrder(int)" name2="deleteOrder(int)" s="50" e="54" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/></params><dm p="com.sustech.main_service.mapper.OrderMapper" s="deleteById(int)" s2="deleteById(int)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="3" N2="3" vars="0" loc="2"/></method><method name="addOrder(java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int)" name2="addOrder(String,String,String,boolean,String,int)" s="56" e="78" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="boolean"/><param type="java.lang.String"/><param type="int"/></params><dm p="com.sustech.main_service.entity.Order" s="Order()"/>
+<dm p="com.sustech.global.utils.DateUtils" s="getCurrDate()" s2="getCurrDate()"/>
+<dm p="com.sustech.global.utils.DateUtils" s="getCurrDate()" s2="getCurrDate()"/>
+<dm p="com.sustech.main_service.mapper.OrderMapper" s="addOrder(com.sustech.main_service.entity.Order)" s2="addOrder(Order)"/>
+<f p="com.sustech.main_service.service.impl.OrderServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="2" cm="0" n1="12" n2="2" N1="34" N2="20" vars="1" loc="18"/></method>
+</type></root>

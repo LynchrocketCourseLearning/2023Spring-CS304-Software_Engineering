@@ -1,0 +1,25 @@
+<root><type name="com.sustech.main_service.entity.Article" s="5"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.Data"/>
+</annotations><field name="id" s="7" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="title" s="8" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="content" s="9" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="user_id" s="10" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="tags" s="11" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="likes" s="12" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="cover" s="13" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="is_anonymous" s="14" type="java.lang.Boolean" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_create" s="15" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_modified" s="16" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

@@ -1,0 +1,8 @@
+<root><type name="com.sustech.main_service.MainServiceApplication" s="9"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.SpringBootApplication"/>
+<annotation name="com.sustech.main_service.ComponentScan"/>
+<annotation name="com.sustech.main_service.CrossOrigin"/>
+<annotation name="com.sustech.main_service.MapperScan"/>
+</annotations><method name="main(java.lang.String[])" name2="main(String[])" s="14" e="16" n ="false" sta ="true" sync ="false" vis="public" return="void"  signature="(java.lang.String[])"><params><param type="java.lang.String[]"/></params><metrics cc="1" cm="0" n1="4" n2="1" N1="3" N2="1" vars="0" loc="1"/></method>
+</type></root>

@@ -1,0 +1,3 @@
+<root><type name="com.sustech.cloud_storage.service.FileUploadingService" s="5"  vis="public"  kind="interface"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<method name="upload(com.sustech.cloud_storage.service.MultipartFile)" name2="upload(MultipartFile)" s="6" e="6" n ="false" sta ="false" sync ="false" vis="package" return="java.lang.String"  signature="(com.sustech.cloud_storage.service.MultipartFile)"><params><param type="com.sustech.cloud_storage.service.MultipartFile"/></params><metrics cc="1" cm="0" n1="2" n2="0" N1="2" N2="0" vars="0" loc="0"/></method>
+</type></root>

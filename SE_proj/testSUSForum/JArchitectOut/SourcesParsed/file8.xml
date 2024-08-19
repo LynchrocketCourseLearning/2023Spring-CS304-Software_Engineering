@@ -1,0 +1,30 @@
+<root><type name="com.sustech.main_service.controller.UserCollectionController" s="13"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.controller.Api"/>
+<annotation name="com.sustech.main_service.controller.RestController"/>
+<annotation name="com.sustech.main_service.controller.RequestMapping"/>
+<annotation name="com.sustech.main_service.controller.CrossOrigin"/>
+</annotations><field name="userCollectionService" s="18" type="com.sustech.main_service.service.UserCollectionService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<method name="addUserCollections(java.lang.String,java.lang.String,boolean)" name2="addUserCollections(String,String,boolean)" s="21" e="36" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,boolean)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="boolean"/></params><dm p="com.sustech.main_service.entity.UserCollection" s="UserCollection()"/>
+<dm p="com.sustech.main_service.service.UserCollectionService" s="addUserCollection(com.sustech.main_service.entity.UserCollection)" s2="addUserCollection(UserCollection)"/>
+<f p="com.sustech.main_service.controller.UserCollectionController" s="userCollectionService"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="java.io.PrintStream" s="println(java.lang.String)" s2="println(String)"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="3" cm="0" n1="14" n2="2" N1="17" N2="14" vars="1" loc="9"/></method><method name="deleteUserCollections(java.lang.String,int)" name2="deleteUserCollections(String,int)" s="38" e="49" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,int)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="int"/></params><dm p="com.sustech.main_service.service.UserCollectionService" s="getByUserCollectionId(int)" s2="getByUserCollectionId(int)"/>
+<f p="com.sustech.main_service.controller.UserCollectionController" s="userCollectionService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.UserCollectionService" s="deleteUserCollection(int)" s2="deleteUserCollection(int)"/>
+<f p="com.sustech.main_service.controller.UserCollectionController" s="userCollectionService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="4" cm="0" n1="9" n2="6" N1="10" N2="17" vars="1" loc="6"/></method>
+</type></root>

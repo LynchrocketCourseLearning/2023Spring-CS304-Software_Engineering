@@ -1,0 +1,91 @@
+<root><type name="com.sustech.main_service.controller.UserCenterController" s="16"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.controller.Api"/>
+<annotation name="com.sustech.main_service.controller.RestController"/>
+<annotation name="com.sustech.main_service.controller.RequestMapping"/>
+<annotation name="com.sustech.main_service.controller.CrossOrigin"/>
+</annotations><field name="userService" s="22" type="com.sustech.main_service.service.UserService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="articleService" s="25" type="com.sustech.main_service.service.ArticleService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="topicService" s="28" type="com.sustech.main_service.service.TopicService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="commentService" s="31" type="com.sustech.main_service.service.CommentService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="userCollectionService" s="34" type="com.sustech.main_service.service.UserCollectionService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<method name="getUserData(java.lang.String)" name2="getUserData(String)" s="37" e="45" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="2" cm="0" n1="14" n2="3" N1="14" N2="9" vars="1" loc="4"/></method><method name="editUserData(com.sustech.main_service.entity.User)" name2="editUserData(User)" s="47" e="56" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(com.sustech.main_service.entity.User)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="com.sustech.main_service.entity.User"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.UserService" s="reviseInfo(com.sustech.main_service.entity.User)" s2="reviseInfo(User)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<metrics cc="2" cm="0" n1="7" n2="3" N1="9" N2="13" vars="1" loc="5"/></method><method name="getUserArticles(java.lang.String)" name2="getUserArticles(String)" s="58" e="70" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.ArticleService" s="getUserArticles(java.lang.String)" s2="getUserArticles(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="articleService"/>
+<dm p="java.util.List" s="size()" s2="size()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="4" cm="0" n1="11" n2="5" N1="13" N2="18" vars="2" loc="7"/></method><method name="getUserTopics(java.lang.String)" name2="getUserTopics(String)" s="72" e="84" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.TopicService" s="getUserTopics(java.lang.String)" s2="getUserTopics(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="topicService"/>
+<dm p="java.util.List" s="size()" s2="size()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="4" cm="0" n1="11" n2="5" N1="13" N2="18" vars="2" loc="7"/></method><method name="getUserComments(java.lang.String)" name2="getUserComments(String)" s="86" e="98" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.CommentService" s="getUserComments(java.lang.String)" s2="getUserComments(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="commentService"/>
+<dm p="java.util.List" s="size()" s2="size()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="4" cm="0" n1="11" n2="5" N1="13" N2="18" vars="2" loc="7"/></method><method name="getUserCollections(java.lang.String)" name2="getUserCollections(String)" s="100" e="129" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.main_service.service.UserCollectionService" s="getUserCollections(java.lang.String)" s2="getUserCollections(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="userCollectionService"/>
+<dm p="java.util.List" s="size()" s2="size()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="java.util.ArrayList" s="ArrayList&lt;UserCollectionVO&gt;()"/>
+<dm p="com.sustech.main_service.service.TopicService" s="getById(java.lang.String)" s2="getById(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="topicService"/>
+<dm p="com.sustech.main_service.service.ArticleService" s="getByArticleId(java.lang.String)" s2="getByArticleId(String)"/>
+<f p="com.sustech.main_service.controller.UserCenterController" s="articleService"/>
+<dm p="com.sustech.main_service.entity.VO.UserCollectionVO" s="UserCollectionVO()"/>
+<dm p="java.util.List" s="add(java.lang.Object)" s2="add(Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="8" cm="0" n1="18" n2="6" N1="39" N2="43" vars="8" loc="23"/></method>
+</type></root>

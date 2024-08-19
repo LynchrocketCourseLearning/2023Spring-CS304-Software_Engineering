@@ -1,0 +1,36 @@
+<root><type name="com.sustech.main_service.service.impl.ArticleServiceImpl" s="19"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.main_service.service.ArticleService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="articleMapper" s="22" type="com.sustech.main_service.mapper.ArticleMapper" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="saveArticle(com.sustech.main_service.entity.Article)" name2="saveArticle(Article)" s="25" e="34" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(com.sustech.main_service.entity.Article)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.main_service.entity.Article"/></params><dm p="java.time.LocalDateTime" s="format(java.time.format.DateTimeFormatter)" s2="format(DateTimeFormatter)"/>
+<dm p="java.time.LocalDateTime" s="now()" s2="now()"/>
+<dm p="java.time.format.DateTimeFormatter" s="ofPattern(java.lang.String)" s2="ofPattern(String)"/>
+<dm p="com.sustech.main_service.mapper.ArticleMapper" s="addArticle(com.sustech.main_service.entity.Article)" s2="addArticle(Article)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="3" cm="0" n1="9" n2="4" N1="17" N2="16" vars="1" loc="9"/></method><method name="getByArticleId(java.lang.String)" name2="getByArticleId(String)" s="36" e="39" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.main_service.entity.Article"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.ArticleMapper" s="getById(java.lang.String)" s2="getById(String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="3" N2="1" vars="0" loc="1"/></method><method name="getArticlePage(int,int)" name2="getArticlePage(int,int)" s="41" e="52" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(int,int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/><param type="int"/></params><dm p="java.util.ArrayList" s="ArrayList&lt;Article&gt;()"/>
+<dm p="com.sustech.main_service.mapper.ArticleMapper" s="getArticlePage(int,int)" s2="getArticlePage(int,int)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<dm p="java.util.stream.Stream" s="peek(java.util.function.Consumer)" s2="peek(Consumer)"/>
+<dm p="java.util.Collection" s="stream()" s2="stream()"/>
+<metrics cc="4" cm="0" n1="11" n2="8" N1="21" N2="15" vars="4" loc="9"/></method><method name="getUserArticles(java.lang.String)" name2="getUserArticles(String)" s="54" e="57" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.ArticleMapper" s="getUserArticles(java.lang.String)" s2="getUserArticles(String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method><method name="getAllArticle()" name2="getAllArticle()" s="59" e="61" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="()"><dm p="com.sustech.main_service.mapper.ArticleMapper" s="getAllArticle()" s2="getAllArticle()"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="1" n2="1" N1="2" N2="1" vars="0" loc="1"/></method><method name="addComment(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" name2="addComment(String,String,String,String)" s="63" e="68" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.global.utils.DateUtils" s="getCurrDate()" s2="getCurrDate()"/>
+<dm p="com.sustech.main_service.mapper.ArticleMapper" s="addComment(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)" s2="addComment(String,String,String,String,boolean,String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="8" n2="1" N1="12" N2="4" vars="1" loc="3"/></method><method name="getArticleComments(java.lang.String)" name2="getArticleComments(String)" s="70" e="73" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.ArticleMapper" s="getArticleComments(java.lang.String)" s2="getArticleComments(String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method><method name="likeArticle(java.lang.String)" name2="likeArticle(String)" s="75" e="78" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.ArticleMapper" s="likeArticle(java.lang.String)" s2="likeArticle(String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="3" n2="2" N1="4" N2="2" vars="0" loc="1"/></method><method name="unlikeArticle(java.lang.String)" name2="unlikeArticle(String)" s="80" e="83" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.ArticleMapper" s="unlikeArticle(java.lang.String)" s2="unlikeArticle(String)"/>
+<f p="com.sustech.main_service.service.impl.ArticleServiceImpl" s="articleMapper"/>
+<metrics cc="1" cm="0" n1="3" n2="2" N1="4" N2="2" vars="0" loc="1"/></method>
+</type></root>

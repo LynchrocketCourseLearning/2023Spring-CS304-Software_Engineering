@@ -1,0 +1,17 @@
+<root><type name="com.sustech.main_service.entity.VO.UserCollectionVO" s="5"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.VO.Data"/>
+</annotations><field name="id" s="7" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="userId" s="8" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="topicId" s="9" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="topicTitle" s="10" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="articleId" s="11" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="articleTitle" s="12" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

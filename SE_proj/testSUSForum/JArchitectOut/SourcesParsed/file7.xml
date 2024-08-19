@@ -1,0 +1,22 @@
+<root><type name="com.sustech.main_service.controller.TopicController" s="12"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.controller.Api"/>
+<annotation name="com.sustech.main_service.controller.RestController"/>
+<annotation name="com.sustech.main_service.controller.RequestMapping"/>
+<annotation name="com.sustech.main_service.controller.CrossOrigin"/>
+</annotations><field name="topicService" s="17" type="com.sustech.main_service.service.TopicService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="userService" s="20" type="com.sustech.main_service.service.UserService" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<method name="addTopic(java.lang.String,boolean,java.lang.String)" name2="addTopic(String,boolean,String)" s="23" e="34" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,boolean,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="boolean"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.entity.Topic" s="Topic()"/>
+<dm p="com.sustech.main_service.service.TopicService" s="addTopic(com.sustech.main_service.entity.Topic)" s2="addTopic(Topic)"/>
+<f p="com.sustech.main_service.controller.TopicController" s="topicService"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="2" cm="0" n1="12" n2="2" N1="16" N2="8" vars="1" loc="7"/></method><method name="getAllTopic()" name2="getAllTopic()" s="36" e="39" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><annotations><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><dm p="com.sustech.main_service.service.TopicService" s="getAllTopic()" s2="getAllTopic()"/>
+<f p="com.sustech.main_service.controller.TopicController" s="topicService"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="2" N2="1" vars="0" loc="1"/></method><method name="getTopicById(java.lang.String)" name2="getTopicById(String)" s="41" e="44" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.TopicService" s="getById(java.lang.String)" s2="getById(String)"/>
+<f p="com.sustech.main_service.controller.TopicController" s="topicService"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="4" N2="1" vars="0" loc="1"/></method>
+</type></root>

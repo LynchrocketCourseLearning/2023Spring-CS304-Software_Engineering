@@ -1,0 +1,8 @@
+<root><type name="com.sustech.global.handler.GlobalExceptionHandler" s="7"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.global.handler.ControllerAdvice"/>
+</annotations><method name="unknownError()" name2="unknownError()" s="9" e="14" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><annotations><annotation name="com.sustech.global.handler.ExceptionHandler"/></annotations><dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="1" N2="3" vars="0" loc="1"/></method>
+</type></root>

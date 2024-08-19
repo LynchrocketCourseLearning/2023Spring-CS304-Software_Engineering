@@ -1,0 +1,32 @@
+<root><type name="com.sustech.main_service.service.impl.TopicServiceImpl" s="17"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="4" >
+<interfaces>
+<interface name="com.sustech.main_service.service.TopicService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="topicMapper" s="24" type="com.sustech.main_service.mapper.TopicMapper" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="addTopic(com.sustech.main_service.entity.Topic)" name2="addTopic(Topic)" s="27" e="35" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(com.sustech.main_service.entity.Topic)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.main_service.entity.Topic"/></params><dm p="java.time.LocalDateTime" s="format(java.time.format.DateTimeFormatter)" s2="format(DateTimeFormatter)"/>
+<dm p="java.time.LocalDateTime" s="now()" s2="now()"/>
+<dm p="java.time.format.DateTimeFormatter" s="ofPattern(java.lang.String)" s2="ofPattern(String)"/>
+<dm p="java.util.Random" s="nextInt(int)" s2="nextInt(int)"/>
+<dm p="java.util.Random" s="Random()"/>
+<dm p="com.sustech.main_service.mapper.TopicMapper" s="addTopic(com.sustech.main_service.entity.Topic)" s2="addTopic(Topic)"/>
+<f p="com.sustech.main_service.service.impl.TopicServiceImpl" s="topicMapper"/>
+<metrics cc="1" cm="0" n1="8" n2="3" N1="14" N2="10" vars="2" loc="6"/></method><method name="getAllTopic()" name2="getAllTopic()" s="37" e="43" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><annotations><annotation name="java.lang.Override"/></annotations><dm p="com.sustech.main_service.mapper.TopicMapper" s="getAllTopic()" s2="getAllTopic()"/>
+<f p="com.sustech.main_service.service.impl.TopicServiceImpl" s="topicMapper"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="8" N2="5" vars="2" loc="4"/></method><method name="getById(java.lang.String)" name2="getById(String)" s="45" e="51" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.TopicMapper" s="getByTopicId(java.lang.String)" s2="getByTopicId(String)"/>
+<f p="com.sustech.main_service.service.impl.TopicServiceImpl" s="topicMapper"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="10" N2="5" vars="2" loc="4"/></method><method name="getUserTopics(java.lang.String)" name2="getUserTopics(String)" s="53" e="56" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.TopicMapper" s="getUserTopics(java.lang.String)" s2="getUserTopics(String)"/>
+<f p="com.sustech.main_service.service.impl.TopicServiceImpl" s="topicMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method>
+</type></root>

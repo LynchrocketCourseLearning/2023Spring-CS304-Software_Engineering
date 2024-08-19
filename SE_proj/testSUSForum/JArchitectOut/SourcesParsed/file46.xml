@@ -1,0 +1,11 @@
+<root><type name="com.sustech.global.entity.GlobalDate" s="5"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.global.entity.Data"/>
+</annotations><field name="year" s="7" type="int" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="month" s="8" type="int" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="day" s="9" type="int" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

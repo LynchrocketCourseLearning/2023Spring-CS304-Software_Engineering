@@ -1,0 +1,25 @@
+<root><type name="com.sustech.main_service.entity.User" s="5"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="3" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.Data"/>
+</annotations><field name="id" s="11" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="username" s="16" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="password" s="21" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="nick_name" s="26" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="email" s="31" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="avatar" s="36" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="background" s="41" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="role" s="46" type="java.lang.Integer" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="gmt_create" s="51" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+<field name="gmt_modified" s="55" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="2" >
+</field>
+
+</type></root>

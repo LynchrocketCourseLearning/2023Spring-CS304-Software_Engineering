@@ -1,0 +1,32 @@
+<root><type name="com.sustech.global.entity.Result" s="6"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="2" >
+<annotations>
+<annotation name="com.sustech.global.entity.Data"/>
+</annotations><method name="Result()" name2="Result()" s="12" e="12" cons ="true" n ="false" sta ="false" sync ="false" vis="private" return="void"  signature="()"><metrics cc="1" cm="0" n1="1" n2="0" N1="1" N2="0" vars="0" loc="0"/></method><field name="code" s="14" type="int" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="message" s="15" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="state" s="16" type="boolean" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="data" s="17" type="java.util.Map" vis="private"  fin ="false" sta ="false" c="0" >
+</field>
+<method name="ok()" name2="ok()" s="19" e="23" n ="false" sta ="true" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><dm p="com.sustech.global.entity.Result" s="Result()"/>
+<f p="com.sustech.global.entity.Result" s="state"/>
+<metrics cc="1" cm="0" n1="7" n2="1" N1="9" N2="1" vars="1" loc="3"/></method><method name="error()" name2="error()" s="25" e="29" n ="false" sta ="true" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><dm p="com.sustech.global.entity.Result" s="Result()"/>
+<f p="com.sustech.global.entity.Result" s="state"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="4" N2="1" vars="1" loc="3"/></method><method name="message(java.lang.String)" name2="message(String)" s="31" e="34" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><params><param type="java.lang.String"/></params><f p="com.sustech.global.entity.Result" s="message"/>
+<f p="com.sustech.global.entity.Result" s="message"/>
+<fm p="com.sustech.global.entity.Result" s="message"/>
+<f p="com.sustech.global.entity.Result" s="message"/>
+<fm p="com.sustech.global.entity.Result" s="message"/>
+<metrics cc="1" cm="0" n1="1" n2="1" N1="5" N2="1" vars="0" loc="2"/></method><method name="code(int)" name2="code(int)" s="36" e="39" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(int)"><params><param type="int"/></params><f p="com.sustech.global.entity.Result" s="code"/>
+<f p="com.sustech.global.entity.Result" s="code"/>
+<fm p="com.sustech.global.entity.Result" s="code"/>
+<f p="com.sustech.global.entity.Result" s="code"/>
+<fm p="com.sustech.global.entity.Result" s="code"/>
+<metrics cc="1" cm="0" n1="1" n2="1" N1="5" N2="1" vars="0" loc="2"/></method><method name="data(java.util.Map)" name2="data(Map)" s="41" e="44" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.util.Map)"><params><param type="java.util.Map"/></params><f p="com.sustech.global.entity.Result" s="data"/>
+<f p="com.sustech.global.entity.Result" s="data"/>
+<fm p="com.sustech.global.entity.Result" s="data"/>
+<f p="com.sustech.global.entity.Result" s="data"/>
+<fm p="com.sustech.global.entity.Result" s="data"/>
+<metrics cc="1" cm="0" n1="1" n2="1" N1="5" N2="1" vars="0" loc="2"/></method>
+</type></root>

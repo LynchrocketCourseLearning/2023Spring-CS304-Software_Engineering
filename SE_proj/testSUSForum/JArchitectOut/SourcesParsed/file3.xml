@@ -1,0 +1,8 @@
+<root><type name="com.sustech.cloud_storage.service.impl.FileUploadingServiceImpl" s="15"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.cloud_storage.service.FileUploadingService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.cloud_storage.service.impl.Service"/>
+</annotations><method name="upload(com.sustech.cloud_storage.service.impl.MultipartFile)" name2="upload(MultipartFile)" s="17" e="51" n ="false" sta ="false" sync ="false" vis="public" return="java.lang.String"  signature="(com.sustech.cloud_storage.service.impl.MultipartFile)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.cloud_storage.service.impl.MultipartFile"/></params><dm p="java.lang.RuntimeException" s="RuntimeException(java.lang.Throwable)"/>
+<metrics cc="5" cm="0" n1="14" n2="4" N1="25" N2="8" vars="8" loc="16"/></method>
+</type></root>

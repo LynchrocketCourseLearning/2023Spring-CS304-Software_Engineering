@@ -1,0 +1,31 @@
+<root><type name="com.sustech.cloud_storage.util.OSSConfig" s="8"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.cloud_storage.util.InitializingBean"/>
+</interfaces><annotations>
+<annotation name="com.sustech.cloud_storage.util.Component"/>
+</annotations><field name="keyId" s="11" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.cloud_storage.util.Value"/></annotations></field>
+<field name="keySecret" s="13" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.cloud_storage.util.Value"/></annotations></field>
+<field name="endPoint" s="16" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.cloud_storage.util.Value"/></annotations></field>
+<field name="bucketName" s="19" type="java.lang.String" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.cloud_storage.util.Value"/></annotations></field>
+<field name="KEY_ID" s="22" type="java.lang.String" vis="public"  fin ="false" sta ="true" c="0" >
+</field>
+<field name="KEY_SECRET" s="23" type="java.lang.String" vis="public"  fin ="false" sta ="true" c="0" >
+</field>
+<field name="END_POINT" s="24" type="java.lang.String" vis="public"  fin ="false" sta ="true" c="0" >
+</field>
+<field name="BUCKET_NAME" s="25" type="java.lang.String" vis="public"  fin ="false" sta ="true" c="0" >
+</field>
+<method name="afterPropertiesSet()" name2="afterPropertiesSet()" s="28" e="34" n ="false" sta ="false" sync ="false" vis="public" return="void"  signature="()"><annotations><annotation name="java.lang.Override"/></annotations><fm p="com.sustech.cloud_storage.util.OSSConfig" s="KEY_ID"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="keyId"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="KEY_SECRET"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="keySecret"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="BUCKET_NAME"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="bucketName"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="END_POINT"/>
+<fm p="com.sustech.cloud_storage.util.OSSConfig" s="endPoint"/>
+<metrics cc="1" cm="0" n1="13" n2="1" N1="17" N2="4" vars="0" loc="4"/></method>
+</type></root>

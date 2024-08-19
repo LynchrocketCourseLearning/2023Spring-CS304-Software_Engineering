@@ -1,0 +1,23 @@
+version: '3'
+services:
+  main_service:
+    image: 'main_service'
+    container_name: 'main_service'
+    ports:
+      - 8010:8010
+    environment:
+      RUN_COMPONENT: 'main'
+  video_service:
+    image: 'video_service'
+    container_name: 'video_service'
+    ports:
+      - 8020:8020
+    environment:
+      RUN_COMPONENT: 'video'
+  cloud_storage:
+    image: 'cloud_storage'
+    container_name: 'cloud_storage'
+    ports:
+      - 8081:8081
+    environment:
+      RUN_COMPONENT: 'cloud'

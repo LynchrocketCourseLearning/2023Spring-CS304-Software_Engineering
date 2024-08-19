@@ -1,0 +1,21 @@
+<root><type name="com.sustech.main_service.service.impl.UserCollectionServiceImpl" s="13"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.main_service.service.UserCollectionService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="userCollectionMapper" s="16" type="com.sustech.main_service.mapper.UserCollectionMapper" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="addUserCollection(com.sustech.main_service.entity.UserCollection)" name2="addUserCollection(UserCollection)" s="19" e="27" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(com.sustech.main_service.entity.UserCollection)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.main_service.entity.UserCollection"/></params><dm p="java.time.LocalDateTime" s="format(java.time.format.DateTimeFormatter)" s2="format(DateTimeFormatter)"/>
+<dm p="java.time.LocalDateTime" s="now()" s2="now()"/>
+<dm p="java.time.format.DateTimeFormatter" s="ofPattern(java.lang.String)" s2="ofPattern(String)"/>
+<dm p="com.sustech.main_service.mapper.UserCollectionMapper" s="addUserCollection(com.sustech.main_service.entity.UserCollection)" s2="addUserCollection(UserCollection)"/>
+<f p="com.sustech.main_service.service.impl.UserCollectionServiceImpl" s="userCollectionMapper"/>
+<dm p="java.io.PrintStream" s="println(int)" s2="println(int)"/>
+<metrics cc="1" cm="0" n1="7" n2="2" N1="14" N2="8" vars="2" loc="6"/></method><method name="deleteUserCollection(int)" name2="deleteUserCollection(int)" s="29" e="32" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/></params><dm p="com.sustech.main_service.mapper.UserCollectionMapper" s="deleteUserCollection(int)" s2="deleteUserCollection(int)"/>
+<f p="com.sustech.main_service.service.impl.UserCollectionServiceImpl" s="userCollectionMapper"/>
+<metrics cc="1" cm="0" n1="3" n2="2" N1="4" N2="2" vars="0" loc="1"/></method><method name="getByUserCollectionId(int)" name2="getByUserCollectionId(int)" s="35" e="38" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.main_service.entity.UserCollection"  signature="(int)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="int"/></params><dm p="com.sustech.main_service.mapper.UserCollectionMapper" s="getById(int)" s2="getById(int)"/>
+<f p="com.sustech.main_service.service.impl.UserCollectionServiceImpl" s="userCollectionMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="3" N2="1" vars="0" loc="1"/></method><method name="getUserCollections(java.lang.String)" name2="getUserCollections(String)" s="40" e="43" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.UserCollectionMapper" s="getUserCollections(java.lang.String)" s2="getUserCollections(String)"/>
+<f p="com.sustech.main_service.service.impl.UserCollectionServiceImpl" s="userCollectionMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method>
+</type></root>

@@ -1,0 +1,20 @@
+<root><type name="com.sustech.main_service.service.impl.UserServiceImpl" s="12"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="4" >
+<interfaces>
+<interface name="com.sustech.main_service.service.UserService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="userMapper" s="20" type="com.sustech.main_service.mapper.UserMapper" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="addUser(com.sustech.main_service.entity.User)" name2="addUser(User)" s="23" e="29" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(com.sustech.main_service.entity.User)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.main_service.entity.User"/></params><dm p="java.time.LocalDateTime" s="format(java.time.format.DateTimeFormatter)" s2="format(DateTimeFormatter)"/>
+<dm p="java.time.LocalDateTime" s="now()" s2="now()"/>
+<dm p="java.time.format.DateTimeFormatter" s="ofPattern(java.lang.String)" s2="ofPattern(String)"/>
+<dm p="com.sustech.main_service.mapper.UserMapper" s="addUser(com.sustech.main_service.entity.User)" s2="addUser(User)"/>
+<f p="com.sustech.main_service.service.impl.UserServiceImpl" s="userMapper"/>
+<metrics cc="1" cm="0" n1="6" n2="2" N1="11" N2="7" vars="1" loc="4"/></method><method name="getByUserId(java.lang.String)" name2="getByUserId(String)" s="31" e="34" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.main_service.entity.User"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.UserMapper" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.service.impl.UserServiceImpl" s="userMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method><method name="getByUsername(java.lang.String)" name2="getByUsername(String)" s="36" e="39" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.main_service.entity.User"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.UserMapper" s="getByUsername(java.lang.String)" s2="getByUsername(String)"/>
+<f p="com.sustech.main_service.service.impl.UserServiceImpl" s="userMapper"/>
+<metrics cc="1" cm="0" n1="2" n2="1" N1="4" N2="1" vars="0" loc="1"/></method><method name="reviseInfo(com.sustech.main_service.entity.User)" name2="reviseInfo(User)" s="41" e="44" n ="false" sta ="false" sync ="false" vis="public" return="boolean"  signature="(com.sustech.main_service.entity.User)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="com.sustech.main_service.entity.User"/></params><dm p="com.sustech.main_service.mapper.UserMapper" s="revise(com.sustech.main_service.entity.User)" s2="revise(User)"/>
+<f p="com.sustech.main_service.service.impl.UserServiceImpl" s="userMapper"/>
+<metrics cc="1" cm="0" n1="3" n2="2" N1="3" N2="2" vars="0" loc="1"/></method>
+</type></root>

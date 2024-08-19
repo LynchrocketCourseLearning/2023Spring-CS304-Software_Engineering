@@ -1,0 +1,19 @@
+<root><type name="com.sustech.main_service.entity.UserCollection" s="5"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.Data"/>
+</annotations><field name="id" s="7" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="user_id" s="8" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="topic_id" s="9" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="article_id" s="10" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="valid" s="11" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_create" s="12" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_modified" s="13" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

@@ -1,0 +1,29 @@
+<root><type name="com.sustech.main_service.entity.Order" s="3"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.entity.Data"/>
+</annotations><field name="id" s="5" type="java.lang.Long" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="name" s="6" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="picture" s="7" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="seller" s="8" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="buyer" s="9" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="seller_contact" s="10" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="buyer_contact" s="11" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="price" s="12" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="status" s="13" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="valid" s="15" type="java.lang.Integer" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_create" s="17" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+<field name="gmt_modified" s="18" type="java.lang.String" vis="package"  fin ="false" sta ="false" c="0" >
+</field>
+
+</type></root>

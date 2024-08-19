@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF - 8'?>
+                     <classpath >
+                       <classpathentry kind="src" path="cloud_storage/src1"/>
+<classpathentry kind="src" path="main_service/src1"/>
+<classpathentry kind="src" path="video_service/src1"/>
+<classpathentry kind="src" path="global/src1"/>
+
+                       <classpathentry kind="lib" path="C:\Users\Lynchrocket\.m2\repository\org\postgresql\postgresql\42.2.18\postgresql-42.2.18.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\charsets.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\javaws.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\jce.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\jfr.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\jfxswt.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\jsse.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\management-agent.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\plugin.jar"/>
+<classpathentry kind="lib" path="D:\Lynchrocket\大三下\软工\lab\8\JArchitect2023.1\SourceAnalyzer\libs\rt.jar"/>
+
+                     </classpath>

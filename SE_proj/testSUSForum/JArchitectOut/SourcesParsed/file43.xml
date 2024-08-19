@@ -1,0 +1,29 @@
+<root><type name="com.sustech.video_service.service.impl.VideoServiceImpl" s="15"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.video_service.service.VideoService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.video_service.service.impl.Service"/>
+</annotations><field name="mapper" s="18" type="com.sustech.video_service.mapper.VideoMapper" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.video_service.service.impl.Autowired"/></annotations></field>
+<method name="upload(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" name2="upload(String,String,String,String,String,String)" s="21" e="26" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="java.lang.String" s="valueOf(int)" s2="valueOf(int)"/>
+<dm p="java.util.Random" s="nextInt(int)" s2="nextInt(int)"/>
+<dm p="java.util.Random" s="Random()"/>
+<dm p="com.sustech.video_service.mapper.VideoMapper" s="addVideo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" s2="addVideo(String,String,String,String,String,String,String,String,String)"/>
+<f p="com.sustech.video_service.service.impl.VideoServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.utils.DateUtils" s="getCurrDate()" s2="getCurrDate()"/>
+<dm p="com.sustech.global.utils.DateUtils" s="getCurrDate()" s2="getCurrDate()"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="10" n2="1" N1="17" N2="7" vars="1" loc="3"/></method><method name="delete(java.lang.String)" name2="delete(String)" s="28" e="32" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.video_service.mapper.VideoMapper" s="deleteVideo(java.lang.String)" s2="deleteVideo(String)"/>
+<f p="com.sustech.video_service.service.impl.VideoServiceImpl" s="mapper"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="3" N2="3" vars="0" loc="2"/></method><method name="getVideo(java.lang.String)" name2="getVideo(String)" s="34" e="40" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.video_service.mapper.VideoMapper" s="getVideoById(java.lang.String)" s2="getVideoById(String)"/>
+<f p="com.sustech.video_service.service.impl.VideoServiceImpl" s="mapper"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="5" n2="1" N1="9" N2="5" vars="2" loc="4"/></method>
+</type></root>

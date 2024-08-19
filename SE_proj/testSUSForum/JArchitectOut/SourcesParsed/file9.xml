@@ -1,0 +1,59 @@
+<root><type name="com.sustech.main_service.controller.ArticleController" s="19"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<annotations>
+<annotation name="com.sustech.main_service.controller.RestController"/>
+<annotation name="com.sustech.main_service.controller.RequestMapping"/>
+<annotation name="com.sustech.main_service.controller.CrossOrigin"/>
+<annotation name="com.sustech.main_service.controller.Api"/>
+</annotations><field name="articleService" s="25" type="com.sustech.main_service.service.ArticleService" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<field name="userService" s="28" type="com.sustech.main_service.service.UserService" vis="package"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.controller.Autowired"/></annotations></field>
+<method name="saveArticle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" name2="saveArticle(String,String,String,String,String)" s="31" e="44" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.PostMapping"/><annotation name="com.sustech.main_service.controller.ApiOperation"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.entity.Article" s="Article()"/>
+<dm p="com.sustech.main_service.service.ArticleService" s="saveArticle(com.sustech.main_service.entity.Article)" s2="saveArticle(Article)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="7" cm="0" n1="17" n2="3" N1="36" N2="17" vars="1" loc="9"/></method><method name="getArticle(java.lang.String)" name2="getArticle(String)" s="46" e="53" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.ArticleService" s="getByArticleId(java.lang.String)" s2="getByArticleId(String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="java.util.HashMap" s="HashMap&lt;String,Object&gt;()"/>
+<dm p="java.util.Map" s="put(java.lang.Object,java.lang.Object)" s2="put(Object,Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="1" cm="0" n1="7" n2="1" N1="10" N2="5" vars="2" loc="4"/></method><method name="getAllArticles()" name2="getAllArticles()" s="55" e="69" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="()"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.GetMapping"/></annotations><dm p="com.sustech.main_service.service.ArticleService" s="getAllArticle()" s2="getAllArticle()"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="java.util.List" s="size()" s2="size()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="java.util.ArrayList" s="ArrayList&lt;Article&gt;()"/>
+<dm p="com.sustech.main_service.service.UserService" s="getByUserId(java.lang.String)" s2="getByUserId(String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="userService"/>
+<dm p="java.util.List" s="add(java.lang.Object)" s2="add(Object)"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="code(int)" s2="code(int)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="4" cm="0" n1="10" n2="6" N1="11" N2="19" vars="3" loc="9"/></method><method name="comment(java.lang.String,java.lang.String,java.lang.String)" name2="comment(String,String,String)" s="71" e="76" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String,java.lang.String,java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/><param type="java.lang.String"/><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.ArticleService" s="addComment(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" s2="addComment(String,String,String,String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<metrics cc="1" cm="0" n1="7" n2="1" N1="10" N2="1" vars="1" loc="2"/></method><method name="getArticleComments(java.lang.String)" name2="getArticleComments(String)" s="78" e="86" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.ArticleService" s="getArticleComments(java.lang.String)" s2="getArticleComments(String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<dm p="com.sustech.global.entity.Result" s="data(java.util.Map)" s2="data(Map)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<metrics cc="2" cm="0" n1="7" n2="3" N1="8" N2="8" vars="1" loc="4"/></method><method name="likeArticle(java.lang.String)" name2="likeArticle(String)" s="88" e="95" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.ArticleService" s="likeArticle(java.lang.String)" s2="likeArticle(String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="2" cm="0" n1="5" n2="2" N1="5" N2="6" vars="0" loc="3"/></method><method name="unlikeArticle(java.lang.String)" name2="unlikeArticle(String)" s="97" e="104" n ="false" sta ="false" sync ="false" vis="public" return="com.sustech.global.entity.Result"  signature="(java.lang.String)"><annotations><annotation name="com.sustech.main_service.controller.ApiOperation"/><annotation name="com.sustech.main_service.controller.PostMapping"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.service.ArticleService" s="unlikeArticle(java.lang.String)" s2="unlikeArticle(String)"/>
+<f p="com.sustech.main_service.controller.ArticleController" s="articleService"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="ok()" s2="ok()"/>
+<dm p="com.sustech.global.entity.Result" s="message(java.lang.String)" s2="message(String)"/>
+<dm p="com.sustech.global.entity.Result" s="error()" s2="error()"/>
+<metrics cc="2" cm="0" n1="5" n2="2" N1="5" N2="6" vars="0" loc="3"/></method>
+</type></root>

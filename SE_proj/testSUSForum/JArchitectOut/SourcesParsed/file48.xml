@@ -1,0 +1,16 @@
+<root><type name="com.sustech.global.utils.DateUtils" s="8"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<method name="getStringDate(int,int,int)" name2="getStringDate(int,int,int)" s="10" e="16" n ="false" sta ="true" sync ="false" vis="public" return="java.lang.String"  signature="(int,int,int)"><params><param type="int"/><param type="int"/><param type="int"/></params><dm p="java.lang.String" s="valueOf(int)" s2="valueOf(int)"/>
+<dm p="java.lang.String" s="valueOf(int)" s2="valueOf(int)"/>
+<dm p="java.lang.String" s="length()" s2="length()"/>
+<dm p="java.lang.String" s="valueOf(int)" s2="valueOf(int)"/>
+<metrics cc="2" cm="0" n1="10" n2="5" N1="17" N2="9" vars="3" loc="6"/></method><method name="getDomainDate(java.lang.String)" name2="getDomainDate(String)" s="18" e="28" n ="false" sta ="true" sync ="false" vis="public" return="com.sustech.global.entity.GlobalDate"  signature="(java.lang.String)"><params><param type="java.lang.String"/></params><dm p="java.lang.String" s="split(java.lang.String)" s2="split(String)"/>
+<dm p="java.lang.Integer" s="parseInt(java.lang.String)" s2="parseInt(String)"/>
+<dm p="java.lang.Integer" s="parseInt(java.lang.String)" s2="parseInt(String)"/>
+<dm p="java.lang.Integer" s="parseInt(java.lang.String)" s2="parseInt(String)"/>
+<dm p="com.sustech.global.entity.GlobalDate" s="GlobalDate()"/>
+<metrics cc="1" cm="0" n1="11" n2="1" N1="18" N2="7" vars="5" loc="9"/></method><method name="getCurrDate()" name2="getCurrDate()" s="30" e="34" n ="false" sta ="true" sync ="false" vis="public" return="java.lang.String"  signature="()"><dm p="java.text.SimpleDateFormat" s="SimpleDateFormat(java.lang.String)"/>
+<dm p="java.util.Date" s="Date(long)"/>
+<dm p="java.lang.System" s="currentTimeMillis()" s2="currentTimeMillis()"/>
+<dm p="java.text.DateFormat" s="format(java.util.Date)" s2="format(Date)"/>
+<metrics cc="1" cm="0" n1="4" n2="1" N1="6" N2="2" vars="2" loc="3"/></method>
+</type></root>

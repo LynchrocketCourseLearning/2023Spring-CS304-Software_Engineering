@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.4" timestamp="2023-05-31T23:50:32.989">
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\VideoServiceApplication.java">
+<violation beginline="9" endline="15" begincolumn="38" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="com.sustech.video_service" class="VideoServiceApplication" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
+All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+<violation beginline="9" endline="15" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="11" endline="11" begincolumn="29" endcolumn="41" rule="UseVarargs" ruleset="Design" package="com.sustech.video_service" class="VideoServiceApplication" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/design.html#UseVarargs" priority="4">
+Consider using varargs for methods or constructors which take an array the last parameter.
+</violation>
+<violation beginline="11" endline="11" begincolumn="29" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service" class="VideoServiceApplication" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="11" endline="13" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service" class="VideoServiceApplication" method="main" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+</file>
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\controller\VideoController.java">
+<violation beginline="15" endline="36" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="com.sustech.video_service.controller" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="15" endline="36" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.controller" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="16" endline="17" begincolumn="5" endcolumn="25" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.controller" class="VideoController" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="17" endline="17" begincolumn="18" endcolumn="24" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.sustech.video_service.controller" class="VideoController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="17" endline="17" begincolumn="5" endcolumn="25" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.controller" class="VideoController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="21" endline="21" begincolumn="45" endcolumn="51" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'user_id' is not final.
+</violation>
+<violation beginline="21" endline="21" begincolumn="78" endcolumn="89" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="cover" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'cover' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="26" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="file" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'file' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="66" endcolumn="76" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="info" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'info' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="53" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="title" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'title' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="91" endcolumn="101" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="type" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'type' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="38" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="upload" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'user_id' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="25" endcolumn="102" rule="UseObjectForClearerAPI" ruleset="Controversial" package="com.sustech.video_service.controller" class="VideoController" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#UseObjectForClearerAPI" priority="3">
+Rather than using a lot of String arguments, consider using a container object for those values.
+</violation>
+<violation beginline="21" endline="23" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.controller" class="VideoController" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="27" endline="27" begincolumn="34" endcolumn="35" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.controller" class="VideoController" method="getById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="27" endline="27" begincolumn="27" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="getById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="29" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.controller" class="VideoController" method="getById" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="33" endline="33" begincolumn="26" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.controller" class="VideoController" method="delete" variable="url" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'url' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="35" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.controller" class="VideoController" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+</file>
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\entity\Video.java">
+<violation beginline="6" endline="14" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="com.sustech.video_service.entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="6" endline="14" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="7" endline="7" begincolumn="5" endcolumn="15" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="7" endline="7" begincolumn="5" endcolumn="15" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="url" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="8" endline="8" begincolumn="5" endcolumn="17" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="8" endline="8" begincolumn="5" endcolumn="17" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="title" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="9" endline="9" begincolumn="5" endcolumn="17" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="9" endline="9" begincolumn="5" endcolumn="17" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="brief" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="10" endline="10" begincolumn="5" endcolumn="20" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="10" endline="10" begincolumn="5" endcolumn="20" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="uploader" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="11" endline="11" begincolumn="5" endcolumn="17" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="11" endline="11" begincolumn="5" endcolumn="17" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="cover" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="12" endline="12" begincolumn="12" endcolumn="21" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.entity" class="Video" variable="gmt_create" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'gmt_create' is not final.
+</violation>
+<violation beginline="12" endline="12" begincolumn="5" endcolumn="22" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="12" endline="12" begincolumn="5" endcolumn="22" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="gmt_create" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="13" endline="13" begincolumn="12" endcolumn="23" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.entity" class="Video" variable="gmt_modified" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'gmt_modified' is not final.
+</violation>
+<violation beginline="13" endline="13" begincolumn="5" endcolumn="24" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.entity" class="Video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="13" endline="13" begincolumn="5" endcolumn="24" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.entity" class="Video" variable="gmt_modified" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+</file>
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\mapper\VideoMapper.java">
+<violation beginline="10" endline="20" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.mapper" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="13" endline="13" begincolumn="25" endcolumn="26" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.mapper" class="VideoMapper" method="addVideo" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="13" endline="13" begincolumn="101" endcolumn="110" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.mapper" class="VideoMapper" method="addVideo" variable="gmt_create" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'gmt_create' is not final.
+</violation>
+<violation beginline="13" endline="13" begincolumn="119" endcolumn="130" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.mapper" class="VideoMapper" method="addVideo" variable="gmt_modified" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'gmt_modified' is not final.
+</violation>
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="143" rule="UseObjectForClearerAPI" ruleset="Controversial" package="com.sustech.video_service.mapper" class="VideoMapper" method="addVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#UseObjectForClearerAPI" priority="3">
+Rather than using a lot of String arguments, consider using a container object for those values.
+</violation>
+<violation beginline="13" endline="13" begincolumn="5" endcolumn="144" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.mapper" class="VideoMapper" method="addVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="15" endline="15" begincolumn="5" endcolumn="32" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.mapper" class="VideoMapper" method="deleteVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="18" endline="18" begincolumn="31" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.mapper" class="VideoMapper" method="getVideoById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="18" endline="18" begincolumn="5" endcolumn="34" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.mapper" class="VideoMapper" method="getVideoById" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+</file>
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\service\VideoService.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="55" rule="UnusedImports" ruleset="Import Statements" package="com.sustech.video_service.service" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.springframework.web.multipart.MultipartFile'
+</violation>
+<violation beginline="6" endline="14" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="8" endline="8" begincolumn="38" endcolumn="44" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.service" class="VideoService" method="upload" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'user_id' is not final.
+</violation>
+<violation beginline="8" endline="8" begincolumn="18" endcolumn="95" rule="UseObjectForClearerAPI" ruleset="Controversial" package="com.sustech.video_service.service" class="VideoService" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#UseObjectForClearerAPI" priority="3">
+Rather than using a lot of String arguments, consider using a container object for those values.
+</violation>
+<violation beginline="8" endline="8" begincolumn="5" endcolumn="96" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service" class="VideoService" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="10" endline="10" begincolumn="5" endcolumn="30" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service" class="VideoService" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="12" endline="12" begincolumn="28" endcolumn="29" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.service" class="VideoService" method="getVideo" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="12" endline="12" begincolumn="5" endcolumn="31" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service" class="VideoService" method="getVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+</file>
+<file name="D:\Lynchrocket\SE_proj\SUSForum\service\video_service\src\main\java\com\sustech\video_service\service\impl\VideoServiceImpl.java">
+<violation beginline="16" endline="41" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="com.sustech.video_service.service.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="16" endline="41" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="18" endline="19" begincolumn="5" endcolumn="23" rule="DefaultPackage" ruleset="Controversial" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="19" endline="19" begincolumn="17" endcolumn="22" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="19" endline="19" begincolumn="5" endcolumn="23" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="22" endline="22" begincolumn="46" endcolumn="52" rule="VariableNamingConventions" ruleset="Naming" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'user_id' is not final.
+</violation>
+<violation beginline="22" endline="22" begincolumn="81" endcolumn="92" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="cover" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'cover' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="26" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="file" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'file' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="69" endcolumn="79" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="info" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'info' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="55" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="title" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'title' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="94" endcolumn="104" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="type" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'type' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="39" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'user_id' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="25" endcolumn="105" rule="UseObjectForClearerAPI" ruleset="Controversial" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#UseObjectForClearerAPI" priority="3">
+Rather than using a lot of String arguments, consider using a container object for those values.
+</violation>
+<violation beginline="22" endline="26" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="23" endline="23" begincolumn="16" endcolumn="17" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="75" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="upload" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'id' could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="26" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="delete" variable="url" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'url' is not assigned and could be declared final
+</violation>
+<violation beginline="29" endline="32" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="35" endline="35" begincolumn="35" endcolumn="36" rule="ShortVariable" ruleset="Naming" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="35" endline="35" begincolumn="28" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="35" endline="40" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="36" endline="36" begincolumn="9" endcolumn="45" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" variable="video" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'video' could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="9" endcolumn="27" rule="UseConcurrentHashMap" ruleset="Controversial" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/controversial.html#UseConcurrentHashMap" priority="3">
+If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+</violation>
+<violation beginline="37" endline="37" begincolumn="9" endcolumn="49" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.sustech.video_service.service.impl" class="VideoServiceImpl" method="getVideo" variable="map" externalInfoUrl="https://pmd.github.io/pmd-5.3.4/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'map' could be declared final
+</violation>
+</file>
+</pmd>

@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > OrderController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.sustech.main_service.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: OrderController (com.sustech.main_service.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">OrderController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.sustech.main_service.controller;
+&nbsp;
+&nbsp;import com.sustech.global.entity.Result;
+&nbsp;import com.sustech.main_service.service.OrderService;
+&nbsp;import io.swagger.annotations.Api;
+&nbsp;import io.swagger.annotations.ApiOperation;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;order&quot;)
+&nbsp;@Api(tags = &quot;订单控制类&quot;)
+&nbsp;@CrossOrigin
+<b class="fc">&nbsp;public class OrderController {</b>
+&nbsp;    @Autowired
+&nbsp;    private OrderService orderService;
+&nbsp;
+&nbsp;    @PostMapping(&quot;add&quot;)
+&nbsp;    @ApiOperation(&quot;新增订单&quot;)
+&nbsp;    public Result addOrder(String name, String picture, String publisher, boolean is_buyer, String contact, int price) {
+<b class="fc">&nbsp;        return orderService.addOrder(name, picture, publisher, is_buyer, contact, price);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @GetMapping(&quot;getAll&quot;)
+&nbsp;    @ApiOperation(&quot;获取全部订单&quot;)
+&nbsp;    public Result getAllOrder() {
+<b class="fc">&nbsp;        return orderService.getAllOrder();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PostMapping(&quot;buy&quot;)
+&nbsp;    @ApiOperation(&quot;为订单添加购买者&quot;)
+&nbsp;    public Result buyOrder(int id, String user_id, String contact) {
+<b class="fc">&nbsp;        return orderService.buyOrder(id, user_id, contact);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PostMapping(&quot;sell&quot;)
+&nbsp;    @ApiOperation(&quot;为订单添加出售者&quot;)
+&nbsp;    public Result sellOrder(int id, String user_id, String contact) {
+<b class="fc">&nbsp;        return orderService.sellOrder(id, user_id, contact);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PostMapping(&quot;delete&quot;)
+&nbsp;    @ApiOperation(&quot;删除订单&quot;)
+&nbsp;    public Result deleteById(int id) {
+<b class="fc">&nbsp;        return orderService.deleteOrder(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-01 01:59</div>
+</div>
+</body>
+</html>

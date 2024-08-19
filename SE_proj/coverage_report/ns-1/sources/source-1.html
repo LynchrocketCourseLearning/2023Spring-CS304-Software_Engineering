@@ -1,0 +1,184 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > AccountController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.sustech.main_service.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: AccountController (com.sustech.main_service.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AccountController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    89.5%
+  </span>
+  <span class="absValue">
+    (34/38)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.sustech.main_service.controller;
+&nbsp;
+&nbsp;import com.sustech.global.entity.Result;
+&nbsp;import com.sustech.main_service.entity.User;
+&nbsp;import com.sustech.main_service.service.UserService;
+&nbsp;import io.swagger.annotations.Api;
+&nbsp;import io.swagger.annotations.ApiOperation;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.HashMap;
+&nbsp;import java.util.Map;
+&nbsp;import java.util.Random;
+&nbsp;
+&nbsp;@Api(tags = &quot;用户账户测试模块&quot;)
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/account&quot;)
+&nbsp;@CrossOrigin
+<b class="fc">&nbsp;public class AccountController {</b>
+&nbsp;    @Autowired
+&nbsp;    private UserService userService;
+&nbsp;    @ApiOperation(value = &quot;登录接口&quot;)
+&nbsp;    @PostMapping(&quot;login&quot;)
+&nbsp;    public Result login(String username, String password) {
+<b class="fc">&nbsp;        User user = userService.getByUsername(username);</b>
+<b class="fc">&nbsp;        if (user != null &amp;&amp; password.equals(user.getPassword())) {</b>
+<b class="fc">&nbsp;            Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;            map.put(&quot;user&quot;,user);</b>
+<b class="fc">&nbsp;            return Result.ok().code(200).data(map);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return Result.error().message(&quot;No such user or invalid username or password&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(value = &quot;注册接口&quot;)
+&nbsp;    @PostMapping(&quot;register&quot;)
+&nbsp;    public Result register(String username, String password, String nick_name, String email) {
+<b class="fc">&nbsp;        User user = new User();</b>
+<b class="fc">&nbsp;        user.setId(String.valueOf(new Random().nextInt(Integer.MAX_VALUE)));</b>
+<b class="fc">&nbsp;        user.setUsername(username);</b>
+<b class="fc">&nbsp;        user.setPassword(password);</b>
+<b class="fc">&nbsp;        user.setNick_name(nick_name);</b>
+<b class="fc">&nbsp;        user.setEmail(email);</b>
+<b class="fc">&nbsp;        user.setRole(1);</b>
+<b class="fc">&nbsp;        User dbUser = userService.getByUsername(username);</b>
+<b class="fc">&nbsp;        if (dbUser != null) {</b>
+<b class="fc">&nbsp;            return Result.error().message(&quot;User exists, please try again.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (user.getPassword() == null) {</b>
+<b class="fc">&nbsp;            return Result.error().code(6000).message(&quot;No password.&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (userService.addUser(user)) {</b>
+<b class="fc">&nbsp;            Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;            map.put(&quot;user&quot;,user);</b>
+<b class="fc">&nbsp;            return Result.ok().code(200).message(&quot;Success to register.&quot;).data(map);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        return Result.error().message(&quot;Fail to add user&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PostMapping(&quot;revise&quot;)
+&nbsp;    @ApiOperation(value = &quot;修改用户信息&quot;)
+&nbsp;    public Result reviseInfo(String id, String username, String password, String nick_name, String email, String avatar, String background) {
+<b class="fc">&nbsp;        User user = userService.getByUserId(id);</b>
+<b class="fc">&nbsp;        if (user == null) {</b>
+<b class="nc">&nbsp;            return Result.error().message(&quot;No such user&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (username == null || password == null) {</b>
+<b class="nc">&nbsp;            return Result.error().message(&quot;Missing username or password&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        user.setUsername(username);</b>
+<b class="fc">&nbsp;        user.setPassword(password);</b>
+<b class="fc">&nbsp;        user.setEmail((email != null) ? email : &quot;&quot;);</b>
+<b class="fc">&nbsp;        user.setNick_name((nick_name != null) ? nick_name : &quot;&quot;);</b>
+<b class="fc">&nbsp;        user.setAvatar((avatar != null) ? avatar : &quot;&quot;);</b>
+<b class="fc">&nbsp;        user.setBackground((background != null) ? background : &quot;&quot;);</b>
+<b class="fc">&nbsp;        if (userService.reviseInfo(user)) {</b>
+<b class="fc">&nbsp;            return Result.ok().code(200);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        return Result.error().code(5000).message(&quot;Fail to modify&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-01 01:59</div>
+</div>
+</body>
+</html>

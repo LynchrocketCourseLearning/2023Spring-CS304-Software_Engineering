@@ -1,0 +1,212 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ArticleController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.sustech.main_service.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: ArticleController (com.sustech.main_service.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ArticleController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.5%
+  </span>
+  <span class="absValue">
+    (35/40)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.sustech.main_service.controller;
+&nbsp;
+&nbsp;import com.sustech.global.entity.Result;
+&nbsp;import com.sustech.main_service.entity.Article;
+&nbsp;import com.sustech.main_service.entity.ArticleComment;
+&nbsp;import com.sustech.main_service.entity.User;
+&nbsp;import com.sustech.main_service.service.ArticleService;
+&nbsp;import com.sustech.main_service.service.UserService;
+&nbsp;import io.swagger.annotations.Api;
+&nbsp;import io.swagger.annotations.ApiOperation;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.HashMap;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Map;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;article&quot;)
+&nbsp;@CrossOrigin
+&nbsp;@Api(tags = &quot;文章测试类&quot;)
+<b class="fc">&nbsp;public class ArticleController {</b>
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    ArticleService articleService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    UserService userService;
+&nbsp;
+&nbsp;    @PostMapping(&quot;save&quot;)
+&nbsp;    @ApiOperation(&quot;保存文章&quot;)
+&nbsp;    public Result saveArticle(String id, String title, String content, String user_id, String cover) {
+<b class="fc">&nbsp;        Article article = new Article();</b>
+<b class="fc">&nbsp;        article.setCover((cover == null) ? &quot;&quot; : cover);</b>
+<b class="fc">&nbsp;        article.setTitle((title == null) ? &quot;&quot; : title);</b>
+<b class="fc">&nbsp;        article.setId((id == null) ? &quot;&quot; : id);</b>
+<b class="fc">&nbsp;        article.setContent((content == null) ? &quot;&quot; : content);</b>
+<b class="fc">&nbsp;        article.setUser_id((user_id == null) ? &quot;&quot; : user_id);</b>
+<b class="fc">&nbsp;        if (articleService.saveArticle(article)) {</b>
+<b class="fc">&nbsp;            return Result.ok().code(200);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        return Result.error().code(5000).message(&quot;Such article has existed&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;查询文章&quot;)
+&nbsp;    @GetMapping(&quot;getById&quot;)
+&nbsp;    public Result getArticle(String id) {
+<b class="fc">&nbsp;        Article article = articleService.getByArticleId(id);</b>
+<b class="fc">&nbsp;        Map&lt;String, Object&gt; data = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        data.put(&quot;article&quot;, article);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(data);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;查询文章列表&quot;)
+&nbsp;    @GetMapping(&quot;getAllArticles&quot;)
+&nbsp;    public Result getAllArticles() {
+<b class="fc">&nbsp;        List&lt;Article&gt; articlePage = articleService.getAllArticle();</b>
+<b class="fc">&nbsp;        if (articlePage == null || articlePage.size() == 0)</b>
+<b class="nc">&nbsp;            return Result.error().message(&quot;No article&quot;);</b>
+<b class="fc">&nbsp;        List&lt;Article&gt; articleVoPage = new ArrayList&lt;&gt;();</b>
+&nbsp;
+<b class="fc">&nbsp;        for (Article article : articlePage) {</b>
+<b class="fc">&nbsp;            User author = userService.getByUserId(article.getUser_id());</b>
+<b class="fc">&nbsp;            article.setUser_id(author.getId());</b>
+<b class="fc">&nbsp;            articleVoPage.add(article);</b>
+<b class="fc">&nbsp;        }</b>
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;articles&quot;,articleVoPage);</b>
+<b class="fc">&nbsp;        return Result.ok().code(200).data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;评论文章&quot;)
+&nbsp;    @PostMapping(&quot;comment&quot;)
+&nbsp;    public Result comment(String info, String articleId, String userId) {
+<b class="fc">&nbsp;        String path = &quot;.&quot;;</b>
+<b class="fc">&nbsp;        return articleService.addComment(userId, articleId, info, path);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;获取文章评论&quot;)
+&nbsp;    @PostMapping(&quot;getArticleComments&quot;)
+&nbsp;    public Result getArticleComments(String id) {
+<b class="fc">&nbsp;        List&lt;ArticleComment&gt; articleCommentList = articleService.getArticleComments(id);</b>
+<b class="fc">&nbsp;        if (articleCommentList == null) {</b>
+<b class="nc">&nbsp;            return Result.error().message(&quot;Fail to get article comments&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;        map.put(&quot;articleComments&quot;, articleCommentList);</b>
+<b class="fc">&nbsp;        return Result.ok().data(map);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;点赞文章&quot;)
+&nbsp;    @PostMapping(&quot;likeArticle&quot;)
+&nbsp;    public Result likeArticle(String articleId) {
+<b class="fc">&nbsp;        if (articleService.likeArticle(articleId)) {</b>
+<b class="nc">&nbsp;            return Result.ok().message(&quot;Like increased by 1&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return Result.error().message(&quot;Error in like&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @ApiOperation(&quot;取消点赞&quot;)
+&nbsp;    @PostMapping(&quot;unlikeArticle&quot;)
+&nbsp;    public Result unlikeArticle(String articleId) {
+<b class="fc">&nbsp;        if (articleService.unlikeArticle(articleId)) {</b>
+<b class="nc">&nbsp;            return Result.ok().message(&quot;Like decreased by 1&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return Result.error().message(&quot;Error in like&quot;);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-01 01:59</div>
+</div>
+</body>
+</html>

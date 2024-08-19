@@ -1,0 +1,11 @@
+<root><type name="com.sustech.main_service.service.impl.CommentServiceImpl" s="11"  vis="public"  kind="class"  dep ="false" fin ="false" sta ="false" abs ="false" n ="false" c="0" >
+<interfaces>
+<interface name="com.sustech.main_service.service.CommentService"/>
+</interfaces><annotations>
+<annotation name="com.sustech.main_service.service.impl.Service"/>
+</annotations><field name="commentMapper" s="14" type="com.sustech.main_service.mapper.CommentMapper" vis="private"  fin ="false" sta ="false" c="0" >
+<annotations><annotation name="com.sustech.main_service.service.impl.Autowired"/></annotations></field>
+<method name="getUserComments(java.lang.String)" name2="getUserComments(String)" s="17" e="20" n ="false" sta ="false" sync ="false" vis="public" return="java.util.List"  signature="(java.lang.String)"><annotations><annotation name="java.lang.Override"/></annotations><params><param type="java.lang.String"/></params><dm p="com.sustech.main_service.mapper.CommentMapper" s="getUserComments(java.lang.String)" s2="getUserComments(String)"/>
+<f p="com.sustech.main_service.service.impl.CommentServiceImpl" s="commentMapper"/>
+<metrics cc="1" cm="0" n1="3" n2="1" N1="6" N2="1" vars="0" loc="1"/></method>
+</type></root>
